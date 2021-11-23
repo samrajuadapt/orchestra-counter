@@ -634,7 +634,13 @@ var customer = new function() {
             var dobYear = new Date(yy, mm-1, dd);
 
             if (dobYear.getTime() > now.getTime()) {
-                this.showDobFieldError(dob[2]);
+                if(dobYear.getFullYear() > now.getFullYear()){
+                    this.showDobFieldError(dob[2]);
+                } else if(dobYear.getMonth() > now.getMonth()){
+                    this.showDobFieldError(dob[0]);
+                } else if(dobYear.getDate() > now.getDate()){
+                    this.showDobFieldError(dob[1]);
+                }
                 toggleErrorLabel(true, dob[1], $saveBtn, '<br>'+jQuery.i18n.prop('error.validate.dob.date.in.future'));
                 return false;
             } else if ((yy+120 < now.getFullYear())){ // DoB < 120 years

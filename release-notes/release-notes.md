@@ -12,7 +12,7 @@ This document describes the new features, bug corrections, known issues and reco
 
 **Date: 04/11/2021**
 
-**Build number: 6**
+**Build number: 7**
 
 <h3>Stories</h3>
 
@@ -27,6 +27,7 @@ This document describes the new features, bug corrections, known issues and reco
 | **Id** | **Release notes** |
 | --- | --- |
 | **QP-9944** | **title of the counter web app should be changed to "Counter"** |
+| **QP-11127** | **Wrong DoB field is highlighted.** |
 
 **Note:** In order to work **QP-10282** correctly, Concierge 4.1.0, Appointment Booking 4.1.0 and Mobile Ticket 1.15.0 applications are required.
 
