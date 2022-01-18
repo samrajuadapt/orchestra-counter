@@ -37,6 +37,7 @@
     ====================================
     Version    Date         Comments                                  Signature
     =========  ===========  ========================================  =========
+    7.0.22     2021-11-24   Changed send SMS default value            basama
     7.0.21     2021-09-02   Added parameter to One click transfer     basama
     7.0.20     2021-02-16   Fixed default value mismatch in marks     udaban 
                             mandatory level
@@ -96,7 +97,7 @@
 
 <unit name="WebServicePoint_PositionalDisplay_WebCFU"
       frameworkVersion="2"
-      unitVersion="7.0.21"
+      unitVersion="7.0.22"
       type="SERVICE_POINT"
       defaultNoUnits="1"
       maxNoUnits="127"
@@ -505,7 +506,7 @@
         <parameter name="sndSMS"
           sortOrder="5041"
           type="Boolean"
-          defaultValue="true"
+          defaultValue="false"
           writeLevel="profile"
           label="Send SMS"
           description="Enable/disable sms option"
