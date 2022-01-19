@@ -302,8 +302,6 @@ function setTempUnitTypeModules(val) {
 
 function setUnitTypeModules(val) {
 	var params = "";
-	console.log(val);
-	
 	if (val != undefined) {
 		params = val.parameters;
 	}

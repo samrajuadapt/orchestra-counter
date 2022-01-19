@@ -202,6 +202,9 @@ var servicePoint = new function () {
 		} else {
 			updateUI();
 		}
+		if(sessvars.currentUser.locale) {
+			document.documentElement.lang = sessvars.currentUser.locale;
+		  }
 		this.teardownAutoCloseListener();
 		this.setupAutoCloseListener();
 	};
