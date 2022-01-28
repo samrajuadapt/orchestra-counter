@@ -12,7 +12,7 @@ This document describes the new features, bug corrections, known issues and reco
 
 **Date: 04/11/2021**
 
-**Build number: 7**
+**Build number: 8**
 
 <h3>Stories</h3>
 
@@ -21,6 +21,7 @@ This document describes the new features, bug corrections, known issues and reco
 | **QP-10771** | **Counter Advanced Serach searching for customers** |
 | **QP-10282** | **Counterterminal queue should indicate when and appointment is multi person or multi service** | 
 | **QP-11086** | **Add new Customer - DoB upto current day should be allowed to match with AB-412** |
+| **QP-11400** | **"send SMS" not checked default** |
 
 <h3>Bug fixes</h3>
 
