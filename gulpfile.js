@@ -416,35 +416,40 @@ function writeManifest(done) {
 
 gulp.task('write:manifest', writeManifest);
 
+function setLangFiles(done, isReset) {
+  fs.readdirSync('./src/lang/').forEach(file => {
+    if(isReset){
+      resetAppVersionInFile('./src/lang/' + file, true, done);
+    } else {
+      setAppVersionInFile('./src/lang/' + file, true, done);
+    }
+  });
+}
+
 // Set app version ***************************************
 
-function setAppVersion(done) {
-  try {
-    var pageData = fs.readFileSync('./src/scripts/core/i18n.js');
-    var versionInfo = getVersionInfo();
-    if (versionInfo && pageData) {
-      pageData = pageData.toString().replace('%APP_VERSION%', ' (Counter ' + versionInfo.version + ') ');
-      fs.writeFileSync('./src/scripts/core/i18n.js', pageData);
-      done();
-      return true;
-    }
-  } catch (ex) {
-    console.log(
-      'There was an exception when trying to read the property file or package.json - ' + ex
-    );
-    done();
-    return false;
-  }
-}
-gulp.task('set:appVersion', setAppVersion);
+gulp.task('set:appVersion', done => {
+  setAppVersionInFile('./src/scripts/core/i18n.js', false, done);
+  setLangFiles(done, false);
+})
 
-function resetAppVersion(done) {
+gulp.task('reset:appVersion', done => {
+  resetAppVersionInFile('./src/scripts/core/i18n.js', false, done);
+  setLangFiles(done, true);
+})
+
+
+function setAppVersionInFile(location, versionOnly, done) {
   try {
-    var pageData = fs.readFileSync('./src/scripts/core/i18n.js');
+    var pageData = fs.readFileSync(location);
     var versionInfo = getVersionInfo();
     if (versionInfo && pageData) {
-      pageData = pageData.toString().replace(' (Counter ' + versionInfo.version + ') ' ,'%APP_VERSION%');
-      fs.writeFileSync('./src/scripts/core/i18n.js', pageData);
+      var title = ' (Counter ' + versionInfo.version + ') ';
+      if (versionOnly){
+        title = 'Version ' + versionInfo.versionPrefix;
+      }
+      pageData = pageData.toString().replace('%APP_VERSION%', title);
+      fs.writeFileSync(location, pageData);
       done();
       return true;
     }
@@ -456,7 +461,29 @@ function resetAppVersion(done) {
     return false;
   }
 }
-gulp.task('reset:appVersion', resetAppVersion);
+
+function resetAppVersionInFile(location, versionOnly, done) {
+  try {
+    var pageData = fs.readFileSync(location);
+    var versionInfo = getVersionInfo();
+    if (versionInfo && pageData) {
+      var title = ' (Counter ' + versionInfo.version + ') ';
+      if (versionOnly){
+        title = 'Version ' + versionInfo.versionPrefix;
+      }
+      pageData = pageData.toString().replace(title ,'%APP_VERSION%');
+      fs.writeFileSync(location, pageData);
+      done();
+      return true;
+    }
+  } catch (ex) {
+    console.log(
+      'There was an exception when trying to read the property file or package.json - ' + ex
+    );
+    done();
+    return false;
+  }
+}
 
 function getVersionInfo() {
   var appData = JSON.parse(fs.readFileSync('./package.json'));
