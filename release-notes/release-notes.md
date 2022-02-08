@@ -10,7 +10,7 @@ This document describes the new features, bug corrections, known issues and reco
 
 <h2>Version 4.1.0</h2>
 
-**Date: 04/11/2021**
+**Date: 08/02/2022**
 
 **Build number: 8**
 
@@ -18,7 +18,7 @@ This document describes the new features, bug corrections, known issues and reco
 
 | **Id** | **Release notes** |
 | --- | --- |
-| **QP-10771** | **Counter Advanced Serach searching for customers** |
+| **QP-10771** | **Counter Advanced Search searching for customers** |
 | **QP-10282** | **Counterterminal queue should indicate when and appointment is multi person or multi service** | 
 | **QP-11086** | **Add new Customer - DoB upto current day should be allowed to match with AB-412** |
 | **QP-11400** | **"send SMS" not checked default** |
@@ -29,6 +29,7 @@ This document describes the new features, bug corrections, known issues and reco
 | --- | --- |
 | **QP-9944** | **title of the counter web app should be changed to "Counter"** |
 | **QP-11127** | **Wrong DoB field is highlighted.** |
+| **QP-11403** | **Applications like workstation terminal should not be translated based on the browser language.** |
 
 **Note:** In order to work **QP-10282** correctly, Concierge 4.1.0, Appointment Booking 4.1.0 and Mobile Ticket 1.15.0 applications are required.
 

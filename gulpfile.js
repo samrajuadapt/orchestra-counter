@@ -224,6 +224,11 @@ function moveReleaseNotes() {
 
 gulp.task('move:release-notes', moveReleaseNotes);
 
+// Copy doc
+gulp.task('create:doc', function () {
+  return gulp.src(['doc/**']).pipe(gulp.dest('dist/doc/'));
+});
+
 function buildArtifactoryZip(done) {
   try {
     var appData = getVersionInfo();
@@ -680,6 +685,7 @@ gulp.task(
     'clean:war',
     'move:lang',
     'clean:build:utts',
+    'create:doc',
     'move:release-notes',
     'build:artifactory:zip',
     'build:artifactory:clean',
