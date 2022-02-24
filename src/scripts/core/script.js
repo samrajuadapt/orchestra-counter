@@ -432,16 +432,14 @@ var servicePoint = new function () {
 		$Qmatic.components.dropdown.branchSelection.onRemoveSingleItem()
 		var branches_tmp = [];
 		var branches;
+		var branchesSW;
+		branches = spService.get("branches");
 		if(sessvars.systemInformation.productVersion >= ORCHESTRA_VERSIONS.ALL_BRANCHES_WITH_SW_SUPPORTED) {
-			branches = spService.get("branches/servicePoints/deviceTypes/SW_SERVICE_POINT");
-			for (var i = 0; i < branches.length; i++) {
-				if (branches[i].servicePoints.length > 0) {
-					branches_tmp.push(branches[i]);	
-				}
-			}
+			branchesSW = spService.get("branches/servicePoints/deviceTypes/SW_SERVICE_POINT");
+			// QP-11757 - Tempory solution for filter branches until fix the issue in endpoint
+			branches_tmp = branchesSW.filter(function (swVal) { return branches.find(function (val) { return val.id == swVal.id})});
 
 		} else {
-			branches = spService.get("branches");
 			// We "filter" out the branches that do not have any software service
 			// points
 		
