@@ -9,9 +9,15 @@
     text-decoration: none;
     overflow: hidden;
   
-    &:hover,
+    &:hover {
+        font-weight: $font-weight-medium;
+        color: $qmatic-btn-hover;
+    }
+
     &:focus {
-        //outline: 0;
+        // outline: 0;
+        outline: 3px solid rgba(0,0,0,0.4);
+        outline-offset: 5px;
         font-weight: $font-weight-medium;
         text-decoration: none;
     }
@@ -49,7 +55,7 @@
   
     &__text {
         @include add-line-clamp-with-ellipsis($lines: 3);
-        
+        // color:#175A83;
         &:after {
             display: block;
             content: attr(title);
@@ -97,6 +103,11 @@
             max-width: none;
             font-size: rem(16px);
         }
+        .qm-action-btn__text-black {
+            color:black !important;
+            max-width: none;
+            font-size: rem(16px);
+        }
     }
 
     &--only-icon {
@@ -132,4 +143,7 @@
             }
         }
     }
+}
+.qm-cancel-btn-text {
+    color:#A71D3D;
 }

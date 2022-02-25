@@ -27,7 +27,7 @@
     }
     &__add-service {
         flex: 0 0 auto;
-        color: $secondary-color;
+        color: #175A83;
         font-weight: $font-weight-light;
         align-items: center;
         text-decoration: none;
@@ -36,14 +36,16 @@
         align-items: center;
         padding-bottom: rem(6px);
         padding-top: rem(4px);
+        margin: 1px;
 
         &:hover,
         &:focus {
             text-decoration: none;
-            color: $secondary-color;
+            color: #175A83;
+            font-weight: 400;
         }
         &:visited {
-            color: $secondary-color;
+            color: #175A83;
         }
     }
     &__add-service-icon {
@@ -123,7 +125,7 @@
     }
     &__expand-container-link {
         text-decoration: none;
-        color: $secondary-color;
+        color: #175A83;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -136,7 +138,7 @@
         &:hover {
             text-decoration: none;
             font-weight: normal;
-            color: $secondary-color;
+            color: #175A83;
         }
     }
     &__service-list-item {

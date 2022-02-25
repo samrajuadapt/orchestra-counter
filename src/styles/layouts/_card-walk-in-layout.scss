@@ -29,7 +29,7 @@
                 display: none;
             }
             .dataTable {
-                color: $dark-transparent82;
+                color: $dark-transparent90;
                 font-family: $font-family;
                 font-size: rem(18px);
                 font-weight: 300;
@@ -46,7 +46,8 @@
                         width: 100%;
                         display: block;
                         &:hover {
-                            background: $dark-transparent04;
+                            background:  $qmatic-hover-color;
+                            border-radius: 100px;
                         }
                         @at-root [dir='rtl'] & {
                             text-align: right !important;
@@ -91,4 +92,8 @@
           }
         }
     }
+}
+
+.icon-close-circle, .close-icon-text {
+    color:#A71D3D !important;
 }

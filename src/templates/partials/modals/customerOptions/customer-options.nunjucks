@@ -20,7 +20,7 @@
                     </button>
                     <button class="qm-action-btn" id="cancelOptions" onclick="servicePoint.cancelCustomerOptionsDialogue();this.blur();">
                         <i class="qm-action-btn__icon icon-close-circle" aria-hidden="true"></i>
-                        <span class="qm-action-btn__text" title="Cancel"></span>
+                        <span class="qm-action-btn__text qm-cancel-btn-text" title="Cancel"></span>
                     </button>
                 </div>
                 <div class="qm-card-action-layout">

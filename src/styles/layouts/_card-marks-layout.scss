@@ -132,7 +132,7 @@
                 }
             }
             .dataTable {
-                color: $dark-transparent82;
+                color: $dark-transparent90;
                 font-family: $font-family;
                 font-size: rem(18px);
                 font-weight: 300;
@@ -180,7 +180,7 @@
                     tr {
                         background: $white;
                         &:hover {
-                            background: $dark-transparent04;
+                            background: $table-row-hover-color;
                         }
                     }
                 }

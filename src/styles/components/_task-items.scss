@@ -29,9 +29,9 @@
     &:focus {
         text-decoration: none;
         color: $card-action-item-color;
-
+  background: $table-row-hover-color;
         &:before {
-            background: rgba($secondary-color, 0.04);
+            // background: $table-row-hover-color;
             color: $card-action-item-color;
         }
     }

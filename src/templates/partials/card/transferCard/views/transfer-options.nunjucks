@@ -34,7 +34,7 @@
         <div class="qm-card-action-layout">
             <button class="qm-action-btn js-cancel-btn" onclick="cardNavigationController.pop();this.blur();">
                 <i class="qm-action-btn__icon icon-close-circle" aria-hidden="true"></i>
-                <span class="qm-action-btn__text"></span>
+                <span class="qm-action-btn__text qm-cancel-btn-text"></span>
             </button>
         </div>
     </div>

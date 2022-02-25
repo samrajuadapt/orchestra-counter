@@ -1,11 +1,15 @@
 .qm-context-marketing {
     display: inline-flex;
     justify-content: flex-end;
-    height: 28px;
+    height: 54px;
+    width: 52px;
     margin-top: rem(4px);
     margin-left: rem(4px);
-    color: $context-marketing-color;
+    color: #0079C2;
     align-self: flex-end;
+    position: absolute;
+    right: 35px;
+    top: 85px;
     &:hover {
         text-decoration: none;
     }
@@ -17,6 +21,14 @@
 
     &__icon {
         font-size: rem(28px);
+        background: #DEEDF6;
+    border-radius: 50px;
+    height: 50px;
+    width: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
     }
 }
 
@@ -27,7 +39,7 @@
         border-radius: $standard-border-radius;
         padding: rem($global-standard-padding 48px $global-standard-padding $global-standard-padding);
         width: 100%;
-        background: $secondary-color;
+        background: $white;
 
         @at-root [dir='rtl'] & {
             padding: rem($global-standard-padding $global-standard-padding $global-standard-padding 48px);
@@ -35,7 +47,7 @@
 
         &__text {
             margin-bottom: 0;
-            color: $white;
+            color: rgba(0,0,0,0.9);
             font-weight: $font-weight-light;
 
             @at-root [dir='rtl'] & {
@@ -47,7 +59,7 @@
             position: absolute;
             top: rem($global-standard-padding + 2);
             right: rem($global-standard-padding);
-            color: $light-transparent50;
+            color: #0079C2;
 
             @at-root [dir='rtl'] & {
                 right: auto;
@@ -60,7 +72,7 @@
 
             &:hover,
             &:focus {
-                color: $white;
+                color: #175A83;
             }
         }
     }

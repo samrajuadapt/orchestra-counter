@@ -29,6 +29,7 @@
         flex: 0 1 auto;
         text-align: right;
         align-items: center;
+        color:$dark-transparent75;
     }
 
     &__home-link {
@@ -60,20 +61,20 @@
     &__help-btn,
     &__logout-btn {
         flex: 1 0 24px;
-        color: $light-transparent50;
+        color: $dark-transparent75;
 
         .qm-action-btn__icon {
             font-size: rem(26px);
         }
 
         &:visited {
-            color: $light-transparent50;
+            color: $dark-transparent75;
         }
 
         &:hover,
         &:focus,
         &:active {
-            color: $white;
+            // color: $white;
         }
     }
 
@@ -98,7 +99,7 @@
         flex: 1 auto;
         align-self: center;
         font-size: rem(21px);
-        color: $white;
+        color: $dark-transparent90;
         margin-left: rem($global-standard-margin);
 
         @at-root [dir='rtl'] & {
@@ -112,7 +113,7 @@
     &__profile-setting {
         display: flex;
         align-items: center;
-        color: $light-transparent50;
+        color: $dark-transparent60;
         margin-top: rem(4px);
         overflow: hidden;
 
@@ -145,7 +146,7 @@
     }
 
     &__edit-profile-settings {
-        color: $light-transparent50;
+        color: #175A83 !important;
         text-decoration: underline;
         margin-left: rem($global-standard-padding / 2);
 
@@ -171,7 +172,7 @@
 
     &__user-name {
         flex: 0 1 auto;
-        color: $light-transparent75;
+        color: $dark-transparent75 !important;
         margin: rem(0 $global-standard-margin / 2);
 
         &:visited {

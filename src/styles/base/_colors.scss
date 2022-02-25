@@ -6,10 +6,17 @@ $pale-blue: #334366;
 $qmatic-bordeaux: #E50046;
 $pale-aquamarine: #03996C;
 $qmatic-aquamarine: #017C65;
-
+$qmatic-green: #3CC500;
+$qmatic-grey: #63635E;
+$qmatic-Turquoise: #50ACA4;
 $qmatic-yellow: #da7715;
+$qmatic-blue: #2389C6;
+$qmatic-hover-color: #ECFAE5;
+$qmatic-btn-hover: #175A83;
+$qmatic-search-icon-background: #DEEDF6;
+$qmatic-search-icon: #0079C2;
 
-$light-gray: #f4f4f4;
+$light-gray: #f9f9f9;
 
 $charcoal: #2b2b2b;
 $soft-gray: #e0e0e0;
@@ -24,10 +31,15 @@ $light-transparent42: rgba(255, 255, 255, 0.42);
 $light-transparent12: rgba(255, 255, 255, 0.12);
 
 $black: #000000;
+$dark-transparent90: rgba(0, 0, 0, 0.90);
 $dark-transparent80: rgba(0, 0, 0, 0.80);
 $dark-transparent82: rgba(0, 0, 0, 0.82);
+$dark-transparent75: rgba(0, 0, 0, 0.75);
+$dark-transparent60: rgba(0, 0, 0, 0.60);
 $dark-transparent62: rgba(0, 0, 0, 0.62);
+$dark-transparent50: rgba(0, 0, 0, 0.50);
 $dark-transparent42: rgba(0, 0, 0, 0.42);
+$dark-transparent30: rgba(0, 0, 0, 0.30);
 $dark-transparent12: rgba(0, 0, 0, 0.12);
 $dark-transparent08: rgba(0, 0, 0, 0.12);
 $dark-transparent04: rgba(0, 0, 0, 0.04);
@@ -45,43 +57,43 @@ $context-marketing-color: #4D6599;
 
 
 // Application specific colors
-$primary-color: $qmatic-bordeaux;
+$primary-color: #175A83;
 $secondary-color: $qmatic-aquamarine;
-$tertiary-color: $midnight-blue;
+$tertiary-color: $white;
 
-$h1-color: $primary-color;
+$h1-color: rgba(0,0,0,0.9);
 
 $right-background-color: $light-gray;
 
-$text-primary-color: $dark-transparent82;
+$text-primary-color: $dark-transparent90;
 
 $input-border-color: $dark-transparent42;
 
 $button-disabled-color: $dark-transparent42;
 $button-disabled-border-color: #949494;
 
-$primary-button-background: $qmatic-bordeaux;
+$primary-button-background: #0079C2;
 $primary-button-text-color: $white;
-$primary-button-border-color: $qmatic-bordeaux;
-$primary-button-active-color: $dark-transparent82;
+$primary-button-border-color: #0079C2;
+$primary-button-active-color: #092231;
 
 $secondary-button-background: $white;
-$secondary-button-text-color: $qmatic-bordeaux;
-$secondary-button-border-color: $qmatic-bordeaux;
-$secondary-button-active-color: $dark-transparent82;
+$secondary-button-text-color: #0079C2;
+$secondary-button-border-color:#0079C2;
+$secondary-button-active-color: #092231;
 
-$primary-action-button-color: $qmatic-bordeaux;
-$primary-action-button-active-color: $dark-transparent82;
-$primary-action-button-disabled-color: $dark-transparent42;
+$primary-action-button-color: #0079C2;
+$primary-action-button-active-color: #092231;
+$primary-action-button-disabled-color: #092231;
 
-$back-button-color: $dark-transparent82;
+$back-button-color: $dark-transparent90;
 
 $card-label-color: $dark-transparent62;
-$card-action-item-color: $qmatic-aquamarine;
+$card-action-item-color: #175A83;
 
-$transparent-card-headline-color: $white;
-$transparent-card-text-color: $white;
-$transparent-card-icon-color: $white;
+$transparent-card-headline-color: $dark-transparent90;
+$transparent-card-text-color: $dark-transparent90;
+$transparent-card-icon-color: $dark-transparent90;
 
 $tooltip-background-color: $dark-transparent82;
 $tooltip-text-color: $white;
@@ -89,23 +101,23 @@ $tooltip-text-color: $white;
 
 $header-background-color: $tertiary-color;
 $header-right-text-color: $light-transparent75;
-$footer-default: $light-transparent50;
+$footer-default: $dark-transparent50;
 $box-background-color: $white;
 $box-border-color: $dark-transparent12;
 
-$tab-text-color: $dark-transparent82;
-$tab-disabled-color: $secondary-color;
+$tab-text-color: $dark-transparent90;
+$tab-disabled-color: #175A83;
 $tab-border-color: $dark-transparent12;
 
-$table-row-hover-color: $white;
+$table-row-hover-color: $qmatic-hover-color;
 
 $services-color: $dark-transparent62;
 
 $popover-background-color: $white;
 
-$toast-success-background-color: $qmatic-aquamarine;
-$toast-error-background-color: #b00020;
-$toast-text-color: $white;
+$toast-success-background-color: #D0F2BF;
+$toast-error-background-color: #F5D8D8;
+$toast-text-color: rgba(0,0,0,0.9);
 
 $sla-warning-color: $qmatic-yellow;
-$sla-danger-color: $primary-color;
+$sla-danger-color: $qmatic-bordeaux;

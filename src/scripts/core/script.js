@@ -1529,15 +1529,15 @@ var servicePoint = new function () {
 		params.branchId = sessvars.branchId;
 		params.visitId = sessvars.state.visit.id;
 		params.$entity = {
-			'custom1': encodeURIComponent(newNotes)
+			'custom1': (newNotes)
 		};
 		// params.json = '{"custom1":"' + newNotes + '"}';
-		params.json = JSON.stringify({custom1:  encodeURIComponent(newNotes)});
+		params.json = JSON.stringify({custom1:  (newNotes)});
 		newNotes = spService.putParams("branches/" + params.branchId + "/visits/"
 			+ params.visitId + "/parameters", params);
 
 		if (newNotes !== null && newNotes.parameterMap !== null && newNotes.parameterMap.custom1 !== "") {
-			document.getElementById("notesMessage").innerHTML = decodeURIComponent(newNotes.parameterMap.custom1);
+			document.getElementById("notesMessage").innerHTML = (newNotes.parameterMap.custom1);
 		} else {
 			document.getElementById("notesMessage").innerHTML = jQuery.i18n.prop('button.add.note');
 		}
@@ -1687,8 +1687,8 @@ var servicePoint = new function () {
 			if (sessvars.state.visit.parameterMap != undefined) {
 				if (sessvars.state.visit.parameterMap.custom1 != undefined) {
 					if (buttonNotesEnabled == true) {
-						document.getElementById("notesMessage").innerHTML = sessvars.state.visit.parameterMap.custom1 ? decodeURIComponent(sessvars.state.visit.parameterMap.custom1) : jQuery.i18n.prop('button.add.note');
-						document.getElementById("notesEdit").value = decodeURIComponent(sessvars.state.visit.parameterMap.custom1);
+						document.getElementById("notesMessage").innerHTML = sessvars.state.visit.parameterMap.custom1 ? (sessvars.state.visit.parameterMap.custom1) : jQuery.i18n.prop('button.add.note');
+						document.getElementById("notesEdit").value = (sessvars.state.visit.parameterMap.custom1);
 					}
 				}
 				if (sessvars.state.visit.parameterMap.meetingUrl != undefined) {
@@ -1826,8 +1826,8 @@ var servicePoint = new function () {
 			if (sessvars.state.visit.parameterMap != undefined) {
 				if (sessvars.state.visit.parameterMap.custom1 != undefined) {
 					if (buttonNotesEnabled == true) {
-						document.getElementById("notesMessage").innerHTML = sessvars.state.visit.parameterMap.custom1 ? decodeURIComponent(sessvars.state.visit.parameterMap.custom1) : jQuery.i18n.prop('button.add.note');
-						document.getElementById("notesEdit").value = decodeURIComponent(sessvars.state.visit.parameterMap.custom1);
+						document.getElementById("notesMessage").innerHTML = sessvars.state.visit.parameterMap.custom1 ? (sessvars.state.visit.parameterMap.custom1) : jQuery.i18n.prop('button.add.note');
+						document.getElementById("notesEdit").value = (sessvars.state.visit.parameterMap.custom1);
 					}
 				}
 				if (sessvars.state.visit.parameterMap.meetingUrl != undefined) {
@@ -1989,7 +1989,7 @@ var servicePoint = new function () {
 			selectedCustomFields = customParameters.split(",");
 			if (sessvars.state.visit.parameterMap != null && sessvars.state.visit.parameterMap.custom1 != null
 				&& selectedCustomFields.indexOf("custom1") != -1) {
-				$("#customfieldvalue1").html(decodeURIComponent(sessvars.state.visit.parameterMap.custom1));
+				$("#customfieldvalue1").html((sessvars.state.visit.parameterMap.custom1));
 				$("#customfieldvalue1").parent().show();
 			}
 			else {

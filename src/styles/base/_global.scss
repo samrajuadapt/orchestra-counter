@@ -10,14 +10,16 @@
 
 ::-webkit-scrollbar-track {
     box-shadow: none;
-    border-radius: 0;
+    border-radius: 10px;
     width: 6px;
-    background-color: $dark-transparent12;
+    background-color: rgba(0,0,0,0.2);
+
 }
 
 ::-webkit-scrollbar-thumb {
     box-shadow: none;
-    background-color: $dark-transparent82;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.3);;
 }
 
 /* IE10+ */

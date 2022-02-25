@@ -1,6 +1,6 @@
 
 <table id="queues" class="qm-table">
-    <thead class="qm-table__header">
+    <thead class="qm-table__header qm-table__header-no-width">
         <tr>
             <th class="myQueueAction"></th>
             <th class="queueId"></th>

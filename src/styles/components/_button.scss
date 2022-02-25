@@ -1,8 +1,8 @@
 .qm-btn {
     display: inline-flex;
-    border: 1px solid transparent;
+    border: 2px solid transparent;
     padding: rem($global-standard-padding / 2 $global-standard-padding * 2);
-    border-radius: rem($standard-border-radius);
+    border-radius: rem($standard-btn-border-radius);
     justify-content: center;
     height: auto;
     cursor: pointer;
@@ -61,17 +61,33 @@
             background: $primary-button-active-color;
             border-color: $primary-button-active-color;
         }
+        &:hover {
+            background: #175A83;
+            border-color: #175A83;
+        }
+        &:focus {
+            outline-offset: 2px;
+            outline: 3px solid rgba(0,0,0,0.6);
+        }
         &[disabled] {
             background: $button-disabled-color;
             border-color: $button-disabled-border-color;
         }
-    }
+    } 
     &--secondary {
         background: $secondary-button-background;
         color: $secondary-button-text-color;
         border-color: $secondary-button-border-color;
         &:active {
             color: $secondary-button-active-color;
+        }
+        &:hover {
+            color: #175A83 ;
+            border-color: #175A83;
+        }
+        &:focus {
+            outline-offset: 2px;
+            outline: 3px solid rgba(0,0,0,0.6);
         }
         &[disabled] {
             border-color: $button-disabled-color;

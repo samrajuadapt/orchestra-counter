@@ -6,11 +6,11 @@
     min-height: $global-card-min-height;
     background-color: $background-color;
     border-radius: $radius;
+    box-shadow: none !important;
     width: 90%;
     margin: auto;
     height: auto;
     padding: rem(40px 32px 32px);
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.18);
     word-break: break-word;
     &__header-section {
         margin-bottom: rem($global-standard-margin);
@@ -80,8 +80,9 @@
 
 @mixin default-card-modal-layout {
     .qm-card__header-section {
-        color: $dark-transparent82;
+        color: $dark-transparent90;
         font-family: $font-family;
+        text-align: center;
         font-size: rem(28px);
         font-weight: 300;
         line-height: rem(32px);
@@ -94,7 +95,7 @@
         padding: rem(25px) 0 rem(25px) 0;
         font-size: rem(24px);
         font-weight: 300;
-        color: $dark-transparent82;
+        color: $dark-transparent90;
     }
     .qm-btns-container {
         width: 100%;
@@ -109,7 +110,7 @@
             margin-bottom: 0;
             .qm-card-header {
                 &__headline {
-                    color: $dark-transparent82;
+                    color: $dark-transparent90;
                     font-size: rem(28px);
                     font-weight: 300;
                     line-height: rem(32px);
@@ -128,11 +129,11 @@
                             margin-right: 0;
                             margin-left: rem(10px);
                         }
-                        color: $dark-transparent82;
+                        color: $dark-transparent90;
                     }
                 }
                 &__sub-heading {
-                    color: $dark-transparent82;
+                    color: $dark-transparent90;
                     font-size: rem(20px);
                     font-weight: 300;
                     line-height: rem(24px);
@@ -171,7 +172,7 @@
                             }
                         }
                         th {
-                            color: $dark-transparent62;
+                            color: $dark-transparent60;
                             font-weight: 500;
                             font-size: rem(12px);
                             line-height: rem(30px);
@@ -182,7 +183,7 @@
                                 &:after {
                                     content: "";
                                     font-family: 'icomoon';
-                                    color: $dark-transparent82;
+                                    color: $dark-transparent90;
                                     width: 10px;
                                     position: absolute;
                                     right: 0;
@@ -194,7 +195,7 @@
                                 &:after {
                                     content: "";
                                     font-family: 'icomoon';
-                                    color: $dark-transparent82;
+                                    color: $dark-transparent90;
                                     ;
                                     width: 10px;
                                     position: absolute;
@@ -207,7 +208,7 @@
                                 &:after {
                                     content: "";
                                     font-family: 'icomoon';
-                                    color: $dark-transparent82;
+                                    color: $dark-transparent90;
                                     width: 10px;
                                     position: absolute;
                                     right: 0;
@@ -218,7 +219,7 @@
                 }
             }
             .dataTable {
-                color: $dark-transparent82;
+                color: $dark-transparent90;
                 font-family: $font-family;
                 font-size: rem(18px);
                 font-weight: 300;
@@ -232,9 +233,9 @@
                     }
                     tr {
                         background: $white;
-                        &:hover {
-                            background: $dark-transparent04;
-                        }
+                        // &:hover {
+                        //     background: $table-row-hover-color;
+                        // }
                     }
                 }
             }

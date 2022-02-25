@@ -22,7 +22,7 @@
         text-overflow: ellipsis;
         text-decoration: none;
         padding-right: rem(4px);
-        color: $h1-color;
+        color: $qmatic-blue !important;
         @at-root [dir='rtl'] & {
             padding-right: 0;
             padding-left: rem(4px);
@@ -75,11 +75,12 @@
     }
     &__add-customer {
         flex: 0 0 28px;
-        color: $secondary-color;
+        color: #0079C2;
         margin-left: rem(4px);
         &:hover {
             text-decoration: none;
-            color: lighten($secondary-color, 5%);
+            color: lighten(#175A83, 5%);
+            font-weight: 500;
         }
         @at-root [dir='rtl'] & {
             margin-left: 0;

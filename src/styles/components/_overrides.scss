@@ -1,6 +1,8 @@
 .dataTables_scrollBody {
     .qm-table__header {
         height: 0;
+        // width: 0;
+        // position: absolute;
         th {
             &:before,
             &:after {
@@ -49,6 +51,10 @@
     .qm-table__header {
         border-bottom: 0;
     }
+}
+.qm-table__header-no-width {
+    position: absolute;
+    width: 0;
 }
 
 .dataTables_scrollHeadInner {

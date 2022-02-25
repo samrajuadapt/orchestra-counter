@@ -28,11 +28,18 @@
 }
 
 #transferTicketToUserPoolTable,
-#transferTicketToCounterPoolTable {
+#transferTicketToCounterPoolTable,
+#transferToQueues {
     .qm-table__body {
+        tr {
+            &:hover {
+                background-color: #ECFAE5;
+                border-radius: 60px;
+            }
+        }
         td {
             cursor: pointer;
-
+         
             &.qm-table__first-column {
               a {
                 color: $dark-transparent82;
@@ -55,8 +62,14 @@
 }
 
 a[tabindex="-1"]:focus{
-    outline: auto 5px -webkit-focus-ring-color !important
+    outline: auto 1px -webkit-focus-ring-color !important
 }
 button[tabindex="-1"]:focus{
-    outline: auto 5px -webkit-focus-ring-color !important
+    outline: auto 1px -webkit-focus-ring-color !important
+}
+
+.qm-btn--with-icon{
+    background: #ECFAE5 !important;
+    border: none !important;
+    color: rgba(0,0,0,0.9) !important;
 }

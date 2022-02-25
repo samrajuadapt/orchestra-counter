@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="qm-card__footer-section">
-                <div class="qm-generic-layout qm-generic-layout--align-right">
+                <div class="qm-generic-layout qm-generic-layout--align-center">
                 {{button.render(id="cancelSettingsBtnModal", type="qm-btn--secondary", handler="servicePoint.cancelConfirmSettings();")}}
                 {{button.render(id="confirmSettingsBtnModal", type="qm-btn--primary", handler="servicePoint.confirmSettings();")}}
                 </div>

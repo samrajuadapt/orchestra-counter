@@ -36,16 +36,16 @@
 }
 
 .qm-field-error {
-    border-color: $primary-color !important;
-    outline-color: $primary-color !important;
+    border-color: $qmatic-bordeaux !important;
+    outline-color: $qmatic-bordeaux !important;
 }
 
 .qm-form-field-label-error {
-    color: $primary-color !important;;
+    color: $qmatic-bordeaux !important;;
 }
 
 .qm-required-label-error {
-    color: $primary-color !important;;
+    color: $qmatic-bordeaux !important;;
 }
 
 
@@ -122,7 +122,7 @@
         font-size: rem(14px);
         color: $dark-transparent62;
         margin-bottom: 0;
-
+        padding: 0px 10px;
         &--with-req {
             flex: 1 1 50%;
         }
@@ -137,7 +137,7 @@
         position: relative;
 
         input {
-            padding: rem(10px 32px 10px $global-standard-padding / 2);
+            padding: rem(10px 32px 10px $global-standard-padding * 1.2);
 
             @at-root [dir='rtl'] & {
                 padding: rem(10px $global-standard-padding / 2 10px 32px);
@@ -168,10 +168,13 @@
     &__clear-btn {
         display: none;
         position: absolute;
-        right: rem(8px);
+        right: 0;
         top: 50%;
         transform: translateY(-50%);
-        color: $dark-transparent62;
+        color: $qmatic-search-icon;
+        // border-radius: 25px;
+        // background: $qmatic-search-icon-background;
+        padding: 8px 12px;
 
         &:hover,
         &:focus {
@@ -194,15 +197,16 @@
         align-self: flex-end;
         color: $secondary-color;
     }
-
+    
     &__text-input {
         width: 100%;
         font-size: rem(18px);
         line-height: 1;
-        padding: rem(10px $global-standard-padding / 2);
+        padding: rem(10px $global-standard-padding * 1.2);
         border: 1px solid rgba(0,0,0,0.12);
         box-shadow: 0 0 4px 0 rgba(0,0,0,0.04);
         font-weight: $font-weight-light;
+        border-radius: 4px;
     }
 
     &__icon {
@@ -218,7 +222,7 @@
     &__error-label {
       position: absolute;
       font-size: rem(12px);
-      color: $primary-color;
+      color: $qmatic-bordeaux;
 
       &--dob {
         bottom: -2px;
@@ -230,6 +234,11 @@
         }
       }
     }
+}
+
+.save-btn[disabled] {
+    background: #E8E8E8 !important;
+    border-color: #E8E8E8 !important;
 }
 
 .qm-fieldset {
@@ -271,13 +280,14 @@
     width: 100%;
     font-size: rem(18px);
     line-height: 1;
-    padding: rem(10px 40px 10px $global-standard-padding / 2);
+    padding: rem(10px 40px 10px $global-standard-padding * 1.5);
     border: 1px solid $dark-transparent12;
+    border-radius: 100px;
     box-shadow: 0 0 4px 0 $dark-transparent04;
     font-weight: $font-weight-light;
 
     @at-root [dir='rtl'] & {
-        padding: rem(10px $global-standard-padding / 2 10px 40px);
+        padding: rem(10px $global-standard-padding * 1.5 10px 40px);
     }
 
     &__icon {
@@ -285,12 +295,20 @@
         font-size: rem(28px);
         color: $dark-transparent62;
         top: 50%;
-        right: 10px;
+        right: 4px;
         transform: translateY(-50%);
-
+        // padding: 7px;
+        width: 38px;
+        height: 38px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        border-radius: 25px;
+        background: $qmatic-search-icon-background;
+        color: $qmatic-search-icon;
         @at-root [dir='rtl'] & {
             right: auto;
-            left: 10px;
+            left: 4px;
         }
     }
 }

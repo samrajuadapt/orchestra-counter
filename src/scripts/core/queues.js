@@ -370,7 +370,7 @@ var queues = new function () {
                                 queues.runClearQueuePopovers();
                             }
                             if (data) {
-                                if (decodeURIComponent(data).trim().length) {
+                                if ((data).trim().length) {
                                     return "<i tabindex='0' class='icon-message'></i>"
                                 } else {
                                     return null;
@@ -467,7 +467,7 @@ var queues = new function () {
                     var noteTxt = '';
                     // var peopleServices;
                     if (aData.parameterMap['custom1']) {
-                        noteTxt = decodeURIComponent(aData.parameterMap['custom1']).trim();
+                        noteTxt = (aData.parameterMap['custom1']).trim();
                     }
                     // if (aData.parameterMap['peopleServices']) {
                     //     peopleServices = JSON.parse(aData.parameterMap['peopleServices']);
@@ -604,7 +604,7 @@ var queues = new function () {
                                 onCreate: function (data) {
                                     var popover = data.instance.popper;
                                     var note = popover.querySelector('.qm-popover-notes-text');
-                                    $(note).text(decodeURIComponent((aData.parameterMap['custom1'])));
+                                    $(note).text(((aData.parameterMap['custom1'])));
 
                                 }
                             }
@@ -721,7 +721,7 @@ var queues = new function () {
                                 queues.runClearQueuePopovers();
                             }
                             if (data) {
-                                if (decodeURIComponent(data).trim().length) {
+                                if ((data).trim().length) {
                                     return "<i tabindex='0' class='icon-message'></i>"
                                 } else {
                                     return null;
@@ -779,7 +779,7 @@ var queues = new function () {
                 var rowCallback = function (nRow, aData, iDisplayIndex) {
                     var noteTxt = '';
                     if (aData.parameterMap['custom1']) {
-                        var noteTxt = decodeURIComponent(aData.parameterMap['custom1']).trim();
+                        var noteTxt = (aData.parameterMap['custom1']).trim();
                     }
 
                     if ($('td:eq(0)', nRow).find('a').length == 0) {
@@ -866,7 +866,7 @@ var queues = new function () {
                                 onCreate: function (data) {
                                     var popover = data.instance.popper;
                                     var note = popover.querySelector('.qm-popover-notes-text');
-                                    $(note).text(decodeURIComponent((aData.parameterMap['custom1'])));
+                                    $(note).text(((aData.parameterMap['custom1'])));
 
                                 }
                             }

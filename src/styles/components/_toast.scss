@@ -9,12 +9,12 @@
 
 // Block
 .qm-toast {
-    padding: rem($global-standard-padding 24px $global-standard-padding);
+    padding: rem($global-standard-padding/2 24px $global-standard-padding/2);
     color: $toast-text-color;
     background: $tertiary-color;
     display: none;
     max-width: 929px;
-    height: 80px;
+    height: 58px;
     width: 100%;
     z-index: 3;
     margin: 0 auto;
@@ -52,7 +52,7 @@
         font-stretch: normal;
         line-height: 1.43;
         letter-spacing: 0.25px;
-        color: #ebeaea;
+        // color: rgba(0,0,0,0.9);
         width: 55%;
 
         @at-root [dir='rtl'] & {
@@ -64,7 +64,7 @@
 
     &__close-btn {
         flex: 0 0 20px;
-        color: $light-transparent82;
+        color: $dark-transparent90;
         cursor: pointer;
 
         &:hover,
@@ -83,15 +83,27 @@
     // Modifiers
     &--success {
         background: $toast-success-background-color;
+        color:rgba(0,0,0,0.9);
     }
 
     &--danger {
         background: $toast-error-background-color;
-
+        
+        color:#A7363D;
+        .qm-checkbox__icon {
+            border: 2px solid #A7363D !important;
+            color:#A7363D !important;
+        }
+        .qm-action-btn__icon {
+            color:#A7363D !important;
+        }
+        .qm-action-btn__icon:hover {
+            color:rgba(0,0,0,0.9) !important;
+        }
         label { 
             .qm-checkbox {
                 &__input:checked ~ .qm-checkbox__icon {
-                    color: $toast-error-background-color;
+                    color:#A7363D;
                 }
             }
         }
@@ -214,7 +226,7 @@ label {
             display: inline-block;
             width: 18px;
             height: 18px;
-            border: 2px solid #ebeaea;
+            border: 2px solid rgba(0,0,0,0.9);
             padding: 2px;
             border-radius: 2px;
             position: relative;
@@ -225,7 +237,7 @@ label {
         }
 
         &__input:checked ~ .qm-checkbox__icon { 
-            background-color: #ebeaea;
+            background-color: transparent;
             color: $qmatic-aquamarine;
         }
 

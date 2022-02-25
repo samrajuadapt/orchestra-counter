@@ -13,8 +13,8 @@
     display: block;
     padding: 0;
     font-size: rem(18px);
-    background: linear-gradient(254.96deg, $background-gradient-stop1 0%, $background-gradient-stop2 34.9%, $background-gradient-stop3 62.87%, $background-gradient-stop4 77.12%, $background-gradient-stop5 100%);
-    color: $white;
+    background: #E3ECF0;
+    color: rgba(0,0,0,0.9);
     position: absolute!important;
     width: 1px;
     height: 1px;
@@ -24,7 +24,7 @@
     &:active,
     &:focus {
       padding: rem(15px $global-standard-padding);
-      color: $white;
+      color: rgba(0,0,0,0.9);
       position: static!important;
       height: auto;
       width: auto;

@@ -255,7 +255,14 @@
 // }
 
 .dataTables_empty {
-	text-align: center;
+	text-align: left;
+	background: $white !important;
+	&:hover{
+		background: $white !important;
+	}
+	@at-root [dir='rtl'] & {
+		text-align: right;
+	}
 }
 
 // tfoot input {

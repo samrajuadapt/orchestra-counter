@@ -82,7 +82,9 @@
             .tooltip-arrow,
             .popper__arrow,
             .popper-arrow {
-                background: $secondary-color;
+                background: $white;
+                box-shadow: none;
+                border: 1px solid rgba(0, 0, 0, 0.34)
             }
         }
     }

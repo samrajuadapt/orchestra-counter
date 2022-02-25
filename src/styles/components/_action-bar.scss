@@ -5,10 +5,10 @@
     height: $global-action-bar-height;
     background: $white;
     padding: rem(0 $global-standard-padding);
-    box-shadow: -10px -12px 60px -6px rgba(0, 0, 0, 0.75);
     
     .qm-action-btn__text{
         @include add-line-clamp-with-ellipsis();
+        // color: #175A83;
     }
 
     &__left {

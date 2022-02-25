@@ -1,11 +1,11 @@
 .qm-pool-item {
     display: flex;
-    padding: rem($global-standard-padding / 2);
+    padding: rem($global-standard-padding / 2) rem($global-standard-padding);
     background: $box-background-color;
     border: 1px solid $box-border-color;
     align-items: center;
     justify-content: space-between;
-
+    border-radius: 25px;
     @at-root .qm-main--no-queues & {
         max-width: 153px;
         width: auto;
@@ -23,13 +23,13 @@
         }
 
         &--ticket {
-            color: $secondary-color;
+            color: #175A83;
             font-weight: bold;
 
             &:visited,
             &:hover,
             &:focus {
-                color: $secondary-color;
+                color: #175A83;
             }
         }
 

@@ -43,9 +43,11 @@
                 .list {
                     &--item {
                         display: flex;
-                        padding: rem(10px 5px);
+                        padding: rem(10px 15px);
+                        position: relative !important;
                         &:hover {
-                            background: $dark-transparent04;
+                            background:  $qmatic-hover-color;
+                            border-radius: 100px;
                         }
                         &-text {
                             flex-grow: 1;
@@ -60,8 +62,18 @@
                             text-align: left;
                             font-weight: 300;
                             color: $dark-transparent82;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            padding: 5px;
                             @at-root [dir='rtl'] & {
                                 text-align: right;
+                            }
+                            &:hover{
+                                background: white !important;
+                              
                             }
 
                         }

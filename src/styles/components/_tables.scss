@@ -13,12 +13,19 @@
     &__body {
 
         tr {
-            background: transparent;
+            background: $white;
+            border-collapse: separate;
+            border-spacing: 0 1em;
+            border-bottom: 4px solid #f9f9f9;
+            border-radius: 4px;
+            // display: flex;
+            // width: 100%;
+            // border-radius: 5px;
 
-            &:hover {
-                background: $table-row-hover-color;
-                box-shadow: 0 0 4px 0 $dark-transparent12;
-            }
+            // &:hover {
+            //     // background: $table-row-hover-color;
+            //     box-shadow: 0 0 4px 0 $dark-transparent12;
+            // }
         }
 
         td {
@@ -29,11 +36,11 @@
 
     &__queue-name,
     &__ticket-code {
-        color: $secondary-color;
+        color: #175A83;
 
-        &:hover,
         &:focus {
-            color: $secondary-color;
+            font-weight: 500;
+            text-decoration: none;
         }
 
         &--disabled {
@@ -43,8 +50,10 @@
     }
 
     &__ticket-code {
-        font-weight: $font-weight-bold;
-
+        font-weight: $font-weight-medium;
+        &:hover {
+            font-weight: $font-weight-bold;
+        }
         &--disabled {
             font-weight: $font-weight-medium;
         }
@@ -183,13 +192,15 @@
 
         .qm-table__body {
             tr {
-                background: transparent;
+                background: $white;
 
-                &:hover {
-                    background: $dark-transparent04;
-                }
+                // &:hover {
+                //     background: $qmatic-hover-color;
+                // }
             }
 
+       
+              
             td {
                 font-size: rem(18px);
                 padding: rem($global-standard-padding / 2 0);
@@ -219,13 +230,17 @@
 
         .qm-table__body {
             tr {
-                background: $table-row-hover-color;
+                
                 border-bottom: 3px solid $right-background-color;
 
                 &:hover {
                     box-shadow: none;
                 }
             }
+             
+            tr:first-child {
+                border-radius: 10px 10px 0 0;
+              }
 
             td {
                 font-size: rem(16px);

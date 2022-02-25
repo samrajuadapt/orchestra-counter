@@ -6,7 +6,7 @@
         position: relative;
         flex: 1 1 100%;
         height: 100%;
-        background: linear-gradient(254.96deg, $background-gradient-stop1 0%, $background-gradient-stop2 34.9%, $background-gradient-stop3 62.87%, $background-gradient-stop4 77.12%, $background-gradient-stop5 100%);
+        background: #E3ECF0;
         min-width: 0;
     }
     &__right {
@@ -15,10 +15,6 @@
         height: 100%;
         padding: rem(40px 32px 30px);
         background: $right-background-color;
-        box-shadow: inset 15px 0px 60px -20px rgba(0, 0, 0, 0.75);
-        @at-root [dir='rtl'] & {
-            box-shadow: inset -15px 0px 60px -20px rgba(0, 0, 0, 0.75);
-        }
     }
     &__scroll-container {
         display: flex;

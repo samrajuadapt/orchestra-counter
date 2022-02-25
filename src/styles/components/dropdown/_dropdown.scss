@@ -47,7 +47,6 @@
             .chosen-drop {
                 border: 0;
                 border-top: 1px solid $dark-transparent12;
-                box-shadow: 4px 0 15px -3px $dark-transparent08, -4px 0 8px -3px $dark-transparent08, 0 4px 5px 3px $dark-transparent08;
             }
             &.single-item {
                 .chosen-single div {
@@ -72,7 +71,7 @@
                 border: 1px solid $dark-transparent12;
                 box-shadow: 0 0 4px 0 $dark-transparent04;
                 padding: 0 !important;
-                border-radius: 0;
+                border-radius: 4px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -153,7 +152,7 @@
                     border: 1px solid $dark-transparent12;
                     color: $dark-transparent42;
                     font-size: rem(18px);
-                    border-radius: 0;
+                    border-radius: 100px;
                     padding: 0 30px 0 10px;
                     @at-root [dir='rtl'] & {
                         padding: 0 10px 0 30px;
@@ -162,13 +161,15 @@
                 &::after {
                     background: transparent;
                     content: "\e92f";
+                    background: $qmatic-search-icon-background;
                     font-family: 'icomoon';
                     font-size: rem(24px);
-
+                    border-radius: 100px;
+                    padding: 8px;
                     position: relative;
-                    right: rem(34px);
-                    top: rem(3px);
-                    color: $dark-transparent42;
+                    right: 2.725rem;
+                    top: 0.2875rem;
+                    color: $qmatic-search-icon;
                     @at-root [dir='rtl'] & {
                         right: rem(-34px);
                     }
@@ -189,8 +190,9 @@
                         line-height: rem(20px);
                     }
                     &.highlighted {
-                        background: $dark-transparent08;
+                        background: $qmatic-hover-color;
                         color: $dark-transparent82;
+                        border-radius: 100px;
                     }
                     &.no-results {
                         color: $dark-transparent82;

@@ -13,7 +13,7 @@
         flex: 0 1 auto;
         background: transparent;
         border: 0;
-        color: $tab-text-color;
+        color: #175A83;
         padding: rem($global-standard-padding / 2 0);
         padding-left: 0;
         font-size: rem(21px);
@@ -73,6 +73,9 @@
     margin-left: rem($global-standard-margin / 2);
     pointer-events: none;
     color: $text-primary-color;
+    background: $white;
+    padding: 5px 10px;
+    border-radius: 16px;
 
     @at-root [aria-selected='false'] & {
         color: $tab-disabled-color;
