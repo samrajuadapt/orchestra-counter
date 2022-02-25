@@ -64,9 +64,6 @@ var contextMarketingController = new $Qmatic.components.popover.ContextMarketing
 var popoverController = new $Qmatic.components.popover.PopoverController();
 var tableScrollController = new $Qmatic.components.TableScrollController();
 
-var ORCHESTRA_VERSIONS = {};
-ORCHESTRA_VERSIONS.ALL_BRANCHES_WITH_SW_SUPPORTED = '4.3.0.91';
-
 var servicePoint = new function () {
 
 	var servicesLeft = false;
@@ -434,7 +431,7 @@ var servicePoint = new function () {
 		var branches;
 		var branchesSW;
 		branches = spService.get("branches");
-		if(sessvars.systemInformation.productVersion >= ORCHESTRA_VERSIONS.ALL_BRANCHES_WITH_SW_SUPPORTED) {
+		if (compatibileHelper.branchSWListCompatible(sessvars.systemInformation.productVersion)){
 			branchesSW = spService.get("branches/servicePoints/deviceTypes/SW_SERVICE_POINT");
 			// QP-11757 - Tempory solution for filter branches until fix the issue in endpoint
 			branches_tmp = branchesSW.filter(function (swVal) { return branches.find(function (val) { return val.id == swVal.id})});
@@ -536,7 +533,7 @@ var servicePoint = new function () {
 		params.branchId = parseInt(branchId);
 		params.deviceType = "SW_SERVICE_POINT";
 	
-		if(sessvars.systemInformation.productVersion >= ORCHESTRA_VERSIONS.ALL_BRANCHES_WITH_SW_SUPPORTED){
+		if (compatibileHelper.branchSWListCompatible(sessvars.systemInformation.productVersion)){
 			var softwareWorkstations = branches_.filter(function (e) {
 				return e.id == params.branchId;
 			})[0].servicePoints;

@@ -12,7 +12,7 @@ This document describes the new features, bug corrections, known issues and reco
 
 **Date: 24/02/2022**
 
-**Build number: 1**
+**Build number: 2**
 
 <h3>Bug fixes</h3>
 
