@@ -1989,7 +1989,7 @@ var servicePoint = new function () {
 			selectedCustomFields = customParameters.split(",");
 			if (sessvars.state.visit.parameterMap != null && sessvars.state.visit.parameterMap.custom1 != null
 				&& selectedCustomFields.indexOf("custom1") != -1) {
-				$("#customfieldvalue1").html((sessvars.state.visit.parameterMap.custom1));
+				$("#customfieldvalue1").html(decodeText(sessvars.state.visit.parameterMap.custom1));
 				$("#customfieldvalue1").parent().show();
 			}
 			else {
@@ -1997,7 +1997,7 @@ var servicePoint = new function () {
 			}
 			if (sessvars.state.visit.parameterMap != null && sessvars.state.visit.parameterMap.custom2 != null
 				&& selectedCustomFields.indexOf("custom2") != -1) {
-				$("#customfieldvalue2").html(decodeURIComponent(sessvars.state.visit.parameterMap.custom2));
+				$("#customfieldvalue2").html(decodeText(sessvars.state.visit.parameterMap.custom2));
 				$("#customfieldvalue2").parent().show();
 			}
 			else {
@@ -2005,7 +2005,7 @@ var servicePoint = new function () {
 			}
 			if (sessvars.state.visit.parameterMap != null && sessvars.state.visit.parameterMap.custom3 != null
 				&& selectedCustomFields.indexOf("custom3") != -1) {
-				$("#customfieldvalue3").html(decodeURIComponent(sessvars.state.visit.parameterMap.custom3));
+				$("#customfieldvalue3").html(decodeText(sessvars.state.visit.parameterMap.custom3));
 				$("#customfieldvalue3").parent().show();
 			}
 			else {
@@ -2013,7 +2013,7 @@ var servicePoint = new function () {
 			}
 			if (sessvars.state.visit.parameterMap != null && sessvars.state.visit.parameterMap.custom4 != null
 				&& selectedCustomFields.indexOf("custom4") != -1) {
-				$("#customfieldvalue4").html(decodeURIComponent(sessvars.state.visit.parameterMap.custom4));
+				$("#customfieldvalue4").html(decodeText(sessvars.state.visit.parameterMap.custom4));
 				$("#customfieldvalue4").parent().show();
 			}
 			else {
@@ -2021,7 +2021,7 @@ var servicePoint = new function () {
 			}
 			if (sessvars.state.visit.parameterMap != null && sessvars.state.visit.parameterMap.custom5 != null
 				&& selectedCustomFields.indexOf("custom5") != -1) {
-				$("#customfieldvalue5").html(decodeURIComponent(sessvars.state.visit.parameterMap.custom5));
+				$("#customfieldvalue5").html(decodeText(sessvars.state.visit.parameterMap.custom5));
 				$("#customfieldvalue5").parent().show();
 			}
 			else {
@@ -3328,6 +3328,14 @@ var servicePoint = new function () {
 
 	this.getWalkdirectDT = function () {
 		return walkTable;
+	};
+	var decodeText = function (text) {
+		try {
+			return decodeURIComponent(text);
+		  }
+		  catch(err) {
+			return text;
+		  }
 	}
 };
 
