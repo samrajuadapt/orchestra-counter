@@ -11,7 +11,7 @@ This document describes the new features, bug corrections, known issues and reco
 
 <h2>Version 5.0.1</h2>
 
-**Date: 25/02/2022**
+**Date: 29/03/2022**
 
 **Build number: 01**
 
