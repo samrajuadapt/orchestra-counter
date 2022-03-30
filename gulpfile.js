@@ -22,6 +22,7 @@ var fs = require('fs');
 var path = require('path');
 var folders = require('gulp-folders-4x');
 var ncmd = require('node-cmd');
+const { exit } = require('process');
 
 var uttsPath = './utt';
 
@@ -407,7 +408,7 @@ function writeManifest(done) {
       var fileContent = 'Build-Date: ' + new Date().toISOString().substring(0, 10) + '\r\n';
       fileContent += 'Built-By: gulp' + '\r\n';
       fileContent += 'Product-Name: Orchestra Web Counter' + '\r\n';
-      fileContent += 'Build-Version: ' + versionInfo.version + '\r\n';
+      fileContent += 'Build-Version: ' + versionInfo.versionPrefix + '\r\n';
       fs.writeFileSync('src/INF/META-INF/MANIFEST.MF', fileContent);
       done();
     }
@@ -452,6 +453,10 @@ function setAppVersionInFile(location, versionOnly, done) {
       var title = ' (Counter ' + versionInfo.version + ') ';
       if (versionOnly){
         title = 'Version ' + versionInfo.versionPrefix;
+      }
+      if (pageData.toString().indexOf('%APP_VERSION%') == -1) {
+        console.log('Please recheck the app version in the appropriate places');
+        exit();
       }
       pageData = pageData.toString().replace('%APP_VERSION%', title);
       fs.writeFileSync(location, pageData);
