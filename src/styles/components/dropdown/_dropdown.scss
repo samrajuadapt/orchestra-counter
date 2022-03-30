@@ -171,7 +171,8 @@
                     top: 0.2875rem;
                     color: $qmatic-search-icon;
                     @at-root [dir='rtl'] & {
-                        right: rem(-34px);
+                        right: -2.825rem;
+                        top: 4px;
                     }
                 }
             }

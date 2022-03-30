@@ -15,7 +15,8 @@
     }
 
     @at-root [dir='rtl'] & {
-        margin-left: 0;
+        left: 35px;
+        right: auto;
         margin-right: rem(4px);
     }
 
