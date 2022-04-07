@@ -1,10 +1,10 @@
-<h1>Release notes Orchestra Web Counter 4.1.1</h1>
+<h1>Release notes Orchestra Web Counter 5</h1>
 
 ----------
 
 <h2>Introduction</h2>
 
-This document describes the new features, bug corrections, known issues and recommendations for Orchestra Web Counter 4.1.0. If you want to know about connector changes details or similar, this document is for you.
+This document describes the new features, bug corrections, known issues and recommendations for Orchestra Web Counter 5. If you want to know about connector changes details or similar, this document is for you.
 
 **Note:** Several of the remarks refer to a Jira number (Jira is Qmatic&#39;s internal registration system for bugs), or Pivotal Tracker (internal system for improvements and other issues).
 
@@ -13,13 +13,19 @@ This document describes the new features, bug corrections, known issues and reco
 
 **Date: 29/03/2022**
 
-**Build number: 01**
+**Build number: 9**
 
 <h3>Stories</h3>
 
 | **Id** | **Release notes** |
 | --- | --- |
 | **COUNTER-582** | **Apply encoded related changes into the core version** |
+
+<h3>Bug fixes</h3>
+
+| **Id** | **Release notes** |
+| --- | --- |
+| **COUNTER-589** | **Apply encoded related changes into the core version** |
 
 ----------
 
